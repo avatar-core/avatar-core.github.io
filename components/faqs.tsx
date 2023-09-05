@@ -2,16 +2,16 @@ import Accordion from "@/components/utils/accordion";
 
 const QUESTIONS = [
   {
-    question: "How does Avatar AI work?",
+    question: "How does avatar.ai work?",
     answer:
       `Our platform's onboarding process collects information on your personality, audience demographics, and monetization objectives. ` +
       `Our team's AI engineers will then create an AI community manager for you to distribute to your fans through a secure link. ` +
-      `Avatar AI will then continually message, engage, and monetize your audience anywhere and anytime.`,
+      `avatar.ai will then continually message, engage, and monetize your audience anywhere and anytime.`,
   },
   {
-    question: "How much does Avatar AI cost?",
+    question: "How much does avatar.ai cost?",
     answer:
-      "Avatar AI has a free trial period of a month. Subscriptions start at $25 per month.",
+      "There is a free trial period for a month. Subscriptions start at $25 per month afterwards.",
   },
   {
     question: "Who owns my data?",
@@ -26,7 +26,7 @@ const QUESTIONS = [
   {
     question: "How am I paid?",
     answer:
-      "Creators are paid on a monthly basis. Payment solutions include direct ACH transfers, Paypal, and Zelle.",
+      "Creators are paid on a monthly basis. Payment methods include direct ACH transfers, Paypal, and Zelle.",
   },
 ] as const;
 
@@ -42,7 +42,6 @@ export default function Faqs() {
             </div>
             <h2 className="h2">Questions & Answers</h2>
           </div>
-
           {/* Faqs */}
           <ul className="max-w-3xl mx-auto pl-12">
             {QUESTIONS.map((q, i) => (
@@ -50,10 +49,10 @@ export default function Faqs() {
                 {q.answer}
               </Accordion>
             ))}
-            <span
-              className="block border-t border-gray-200"
-              aria-hidden="true"
-            ></span>
+            {/*<span*/}
+            {/*  className="block border-t border-gray-200"*/}
+            {/*  aria-hidden="true"*/}
+            {/*/>*/}
           </ul>
         </div>
       </div>

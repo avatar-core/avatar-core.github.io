@@ -40,7 +40,7 @@ const PROBLEMS = [
     id: 2,
     title: "Retain",
     description:
-      "Maintaining fan interest and attention amidst fierce competition is tough.",
+      "Maintaining fan interest and attention amidst fierce competition among creators is tough.",
     icon: (
       <g fill="none" fillRule="evenodd">
         <rect
