@@ -24,6 +24,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <link rel="icon" href="/favicon.svg" />
       <Script src="https://www.googletagmanager.com/gtag/js?id=G-324NEVCL3L" />
       <Script id="google-analytics">
         {`
