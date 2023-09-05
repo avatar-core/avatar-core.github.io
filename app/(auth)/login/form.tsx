@@ -15,7 +15,7 @@ export default function Form() {
     },
     validate: {
       email: (val) => (/^\S+@\S+$/.test(val) ? null : "Invalid email"),
-      password: (value) => value.trim().length < 2,
+      password: (value) => value.length < 8 ? 'Password must be at least 8 characters' : null,
     },
   });
 
@@ -52,6 +52,7 @@ export default function Form() {
             disabled={loading}
             {...form.getInputProps("email")}
           />
+          {form.errors.email && <div className="mt-2 text-xs text-red-500">{form.errors.email}</div>}
         </div>
         <div>
           <div className="flex justify-between">
@@ -75,6 +76,7 @@ export default function Form() {
             disabled={loading}
             {...form.getInputProps("password")}
           />
+          {form.errors.password && <div className="mt-2 text-xs text-red-500">{form.errors.password}</div>}
         </div>
       </div>
       <div className="mt-6">

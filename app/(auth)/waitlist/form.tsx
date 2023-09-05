@@ -25,8 +25,8 @@ export default function Form() {
       message: "",
     },
     validate: {
-      firstName: (value) => value.trim().length < 2,
-      lastName: (value) => value.trim().length < 2,
+      firstName: (value) => value.trim().length < 2 ? "Name must be at least 2 characters" : null,
+      lastName: (value) => value.trim().length < 2 ? "Name must be at least 2 characters" : null,
       email: (val) => (/^\S+@\S+$/.test(val) ? null : "Invalid email"),
     },
   });
@@ -82,34 +82,36 @@ export default function Form() {
           <div className="sm:w-1/2">
             <label
               className="block text-sm text-slate-600 font-medium mb-1"
-              htmlFor="name"
+              htmlFor="first-name"
             >
               First Name <span className="text-rose-500">*</span>
             </label>
             <input
-              id="firstName"
+              id="first-name"
               className="form-input text-sm py-2 w-full"
               type="text"
               disabled={loading}
               required
               {...form.getInputProps("firstName")}
             />
+            {form.errors.firstName && <div className="mt-2 text-xs text-red-500">{form.errors.firstName}</div>}
           </div>
           <div className="sm:w-1/2">
             <label
               className="block text-sm text-slate-600 font-medium mb-1"
-              htmlFor="surname"
+              htmlFor="last-name"
             >
               Last Name <span className="text-rose-500">*</span>
             </label>
             <input
-              id="lastName"
+              id="last-name"
               className="form-input text-sm py-2 w-full"
               type="text"
               disabled={loading}
               required
               {...form.getInputProps("lastName")}
             />
+            {form.errors.lastName && <div className="mt-2 text-xs text-red-500">{form.errors.lastName}</div>}
           </div>
         </div>
         <div>
@@ -127,6 +129,7 @@ export default function Form() {
             required
             {...form.getInputProps("email")}
           />
+          {form.errors.email && <div className="mt-2 text-xs text-red-500">{form.errors.email}</div>}
         </div>
         <div>
           <label

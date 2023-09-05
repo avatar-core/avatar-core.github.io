@@ -59,9 +59,7 @@ export default function Form() {
               required
               {...form.getInputProps("email")}
             />
-            {form.errors.email && <div className="mt-2 text-sm text-red-500">
-              Please enter a valid email address
-            </div>}
+            {form.errors.email && <div className="mt-2 text-xs text-red-500">{form.errors.email}</div>}
           </div>
         </div>
         <div className="mt-6">
