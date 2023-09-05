@@ -9,7 +9,7 @@ import HowItWorks from "@/components/works";
 
 export const metadata = {
   title: "Home - Avatar",
-  description: "Create a conversational AI to increase audience engagement",
+  description: "Engage your audience intelligently",
 };
 
 export default function Home() {

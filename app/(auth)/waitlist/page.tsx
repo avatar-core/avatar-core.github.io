@@ -6,8 +6,8 @@ import Auth from "@/components/auth";
 import Form from "./form";
 
 export const metadata = {
-  title: "Waitlist - Avatar AI",
-  description: "Sign up for Avatar AI waitlist",
+  title: "Waitlist - Avatar",
+  description: "Engage your audience intelligently",
 };
 
 export default function Waitlist() {

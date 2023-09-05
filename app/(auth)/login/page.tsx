@@ -6,8 +6,8 @@ import Auth from "@/components/auth";
 import Form from "./form";
 
 export const metadata = {
-  title: "Login - Avatar AI",
-  description: "Log into Avatar AI dashboard",
+  title: "Log in - Avatar",
+  description: "Engage your audience intelligently",
 };
 
 export default function Login() {

@@ -2,9 +2,13 @@ import Image from "next/image";
 import Illustration from "@/public/images/auth-illustration.svg";
 import Form from './form'
 
+export const metadata = {
+  title: "Reset Password - Avatar",
+  description: "Engage your audience intelligently",
+};
+
+
 export default function ResetPassword() {
-
-
   return (
     <>
       <div

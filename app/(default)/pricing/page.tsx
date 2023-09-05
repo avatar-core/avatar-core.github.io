@@ -4,8 +4,8 @@ import PricingTables from "@/components/pricing-tables";
 import TestimonialsCarousel from "@/components/testimonials-carousel";
 
 export const metadata = {
-  title: "Pricing - Simple",
-  description: "Page description",
+  title: "Pricing - Avatar",
+  description: "Engage your audience intelligently",
 };
 
 export default function Pricing() {

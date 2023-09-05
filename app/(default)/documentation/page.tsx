@@ -2,8 +2,8 @@ import Content from "./content";
 import Sidebar from "./nav-sidebar";
 
 export const metadata = {
-  title: "Documentation - Simple",
-  description: "Page description",
+  title: "Documentation - Avatar",
+  description: "Engage your audience intelligently",
 };
 
 export default function Documentation() {

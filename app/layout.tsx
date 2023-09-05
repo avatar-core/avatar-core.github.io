@@ -13,8 +13,8 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "Avatar AI",
-  description: "",
+  title: "Avatar",
+  description: "Engage your audience intelligently",
 };
 
 export default function RootLayout({

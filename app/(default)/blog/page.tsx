@@ -6,8 +6,8 @@ import PopularPosts from "./popular-posts";
 import Topics from "./topics";
 
 export const metadata = {
-  title: "Blog - Simple",
-  description: "Page description",
+  title: "Blog - Avatar",
+  description: "Engage your audience intelligently",
 };
 
 export default function Blog() {

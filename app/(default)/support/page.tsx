@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Support - Simple",
-  description: "Page description",
+  title: "Support - Avatar",
+  description: "Engage your audience intelligently",
 };
 
 export default function Support() {

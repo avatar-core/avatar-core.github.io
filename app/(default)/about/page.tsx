@@ -8,8 +8,8 @@ import Intro from "./intro";
 import Story from "./story";
 
 export const metadata = {
-  title: "About - Simple",
-  description: "Page description",
+  title: "About - Avatar",
+  description: "Engage your audience intelligently",
 };
 
 export default function About() {
