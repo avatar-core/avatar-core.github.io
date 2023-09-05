@@ -25,8 +25,10 @@ export default function Form() {
       message: "",
     },
     validate: {
-      firstName: (value) => value.trim().length < 2 ? "Name must be at least 2 characters" : null,
-      lastName: (value) => value.trim().length < 2 ? "Name must be at least 2 characters" : null,
+      firstName: (value) =>
+        value.trim().length < 2 ? "Name must be at least 2 characters" : null,
+      lastName: (value) =>
+        value.trim().length < 2 ? "Name must be at least 2 characters" : null,
       email: (val) => (/^\S+@\S+$/.test(val) ? null : "Invalid email"),
     },
   });
@@ -66,7 +68,12 @@ export default function Form() {
         try {
           setLoading(true);
           setError(undefined);
-          await Email.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, values, EMAILJS_PUBLIC_API_KEY);
+          await Email.send(
+            EMAILJS_SERVICE_ID,
+            EMAILJS_TEMPLATE_ID,
+            values,
+            EMAILJS_PUBLIC_API_KEY
+          );
           setCompleted(true);
         } catch (err) {
           if (err instanceof Error) {
@@ -94,7 +101,11 @@ export default function Form() {
               required
               {...form.getInputProps("firstName")}
             />
-            {form.errors.firstName && <div className="mt-2 text-xs text-red-500">{form.errors.firstName}</div>}
+            {form.errors.firstName && (
+              <div className="mt-2 text-xs text-red-500">
+                {form.errors.firstName}
+              </div>
+            )}
           </div>
           <div className="sm:w-1/2">
             <label
@@ -111,7 +122,11 @@ export default function Form() {
               required
               {...form.getInputProps("lastName")}
             />
-            {form.errors.lastName && <div className="mt-2 text-xs text-red-500">{form.errors.lastName}</div>}
+            {form.errors.lastName && (
+              <div className="mt-2 text-xs text-red-500">
+                {form.errors.lastName}
+              </div>
+            )}
           </div>
         </div>
         <div>
@@ -129,7 +144,9 @@ export default function Form() {
             required
             {...form.getInputProps("email")}
           />
-          {form.errors.email && <div className="mt-2 text-xs text-red-500">{form.errors.email}</div>}
+          {form.errors.email && (
+            <div className="mt-2 text-xs text-red-500">{form.errors.email}</div>
+          )}
         </div>
         <div>
           <label
@@ -208,7 +225,7 @@ export default function Form() {
           disabled={loading}
         >
           Reserve{" "}
-          <span className="tracking-normal text-white-300 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">
+          <span className="tracking-normal text-white group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">
             -&gt;
           </span>
         </button>

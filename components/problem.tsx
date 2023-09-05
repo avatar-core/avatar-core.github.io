@@ -3,9 +3,9 @@
 const PROBLEMS = [
   {
     id: 1,
-    title: "Content",
+    title: "Engage",
     description:
-      "A creator with limited time and energy is limited in the amount of content they can create for their audience.",
+      "With a growing fan base, you need to deliver personalized content, but time is tight.",
     icon: (
       <g fill="none" fillRule="evenodd">
         <rect
@@ -38,9 +38,9 @@ const PROBLEMS = [
   },
   {
     id: 2,
-    title: "Engagement",
+    title: "Retain",
     description:
-      "Improving audience engagement can be difficult with only static unpersonalized content or limited time online streaming.",
+      "Maintaining fan interest and attention amidst fierce competition is tough.",
     icon: (
       <g fill="none" fillRule="evenodd">
         <rect
@@ -71,9 +71,9 @@ const PROBLEMS = [
   },
   {
     id: 3,
-    title: "Monetization",
+    title: "Monetize",
     description:
-      "Optimizing finding and selecting the appropriate monetization strategies for each fan requires intimate knowledge about each fan.",
+      "Balancing fan engagement with monetization is crucial. You didn't start to push sales, but it's essential for a healthy business.",
     icon: (
       <g fill="none" fillRule="evenodd">
         <rect
@@ -120,10 +120,10 @@ export default function Problem() {
             <div className="uppercase mb-4 text-xl font-bold text-blue-600 tracking-wider">
               Problem
             </div>
-            <h2 className="h2 mb-4">Scaling a business as a creator is hard</h2>
+            <h2 className="h2 mb-4">Growing as a creator is challenging</h2>
             <p className="text-xl text-gray-600">
-              Creating content, improving audience engagement, and monetizing
-              takes significant amounts of time, energy, and expertise.
+              You started creating to share your passion, but now you're
+              juggling business tasks, leaving less time for content creation.
             </p>
           </div>
         </div>

@@ -3,7 +3,7 @@ import VideoThumb from "@/public/images/hero-image-01.png";
 
 import ModalVideo from "@/components/modal-video";
 
-export default function HeroHome() {
+export default function Hero() {
   return (
     <section className="relative">
       {/* Illustration behind hero content */}
@@ -42,17 +42,34 @@ export default function HeroHome() {
         <div className="pt-32 pb-12 md:pt-40 md:pb-20">
           {/* Section header */}
           <div className="text-center pb-12 md:pb-16">
+            {/*<div data-aos="fade-down" className="mb-6">*/}
+            {/*  <div className="inline-flex relative round-full before:absolute before:inset-0 before:bg-blue-500 before:blur-md">*/}
+            {/*    <a className="btn-sm py-1 text-white hover:text-white transition duration-150 ease-in-out group [background:linear-gradient(theme(colors.blue.600),_theme(colors.blue.600))_padding-box,_linear-gradient(theme(colors.blue.600),_theme(colors.blue.300)_75%,_theme(colors.transparent)_100%)_border-box] relative before:absolute before:inset-0 before:bg-blue-600/50 rounded-full before:pointer-events-none shadow" href="#0">*/}
+            {/*      <span className="text-sm relative inline-flex items-center">*/}
+            {/*        avatar.ai is now in beta <span className="tracking-normal text-white group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span>*/}
+            {/*      </span>*/}
+            {/*    </a>*/}
+            {/*  </div>*/}
+            {/*</div>*/}
+            {/*<div data-aos="zoom-out">*/}
+            {/*  <div className="relative text-sm text-white bg-blue-600 rounded-full inline-block px-4 py-1 mb-6 before:content-[''] before:absolute before:-z-10 before:inset-0 before:-m-0.5 before:bg-gradient-to-t before:from-blue-600 before:to-blue-600 before:via-blue-400 before:rounded-full">*/}
+            {/*    <div className="text-white">*/}
+            {/*      The most advanced AI community manager{' '}*/}
+            {/*      <span className="tracking-normal group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span>*/}
+            {/*    </div>*/}
+            {/*  </div>*/}
+            {/*</div>*/}
             <div
               className="uppercase mb-4 text-xl font-bold text-blue-600 tracking-wider"
               data-aos="zoom-y-out"
             >
-              Avatar AI
+              avatar.ai
             </div>
             <h1
               className="text-5xl md:text-6xl font-extrabold leading-tighter tracking-tighter mb-4"
               data-aos="zoom-y-out"
             >
-              Engage your audience{" "}
+              Engage your community{" "}
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400">
                 intelligently
               </span>
@@ -63,9 +80,9 @@ export default function HeroHome() {
                 data-aos="zoom-y-out"
                 data-aos-delay="150"
               >
-                Monetize and improve your audience engagement with a
-                customizable AI that automatically holds engaging personalized
-                conversations with your fans.
+                Use the latest in AI technology to control how you manage your
+                communities. avatar.ai automatically chats with your fans, and
+                convert fans into paying customers.
               </p>
               <div
                 className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center"
@@ -74,11 +91,11 @@ export default function HeroHome() {
               >
                 <div>
                   <Link
-                    className="btn text-white bg-blue-600 hover:bg-blue-700 w-full mb-4 sm:w-auto sm:mb-0"
+                    className="btn text-white bg-blue-600 hover:bg-blue-700 w-full mb-4 sm:w-auto sm:mb-0 group"
                     href="/waitlist"
                   >
-                    Join Waitlist
-                    <span className="tracking-normal text-white-300 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">
+                    I'm Interested
+                    <span className="tracking-normal text-white group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">
                       -&gt;
                     </span>
                   </Link>

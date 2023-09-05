@@ -1,11 +1,12 @@
+import CaseStudies from "@/components/case-studies";
 import Cta from "@/components/cta";
 import Faqs from "@/components/faqs";
-import World from "@/components/features-world";
-import Hero from "@/components/hero-home";
+import Hero from "@/components/hero";
+import HowItWorks from "@/components/how";
 import News from "@/components/news";
 import Problem from "@/components/problem";
 import Solution from "@/components/solution";
-import HowItWorks from "@/components/works";
+import World from "@/components/world";
 
 export const metadata = {
   title: "Home - Avatar",
@@ -18,8 +19,11 @@ export default function Home() {
       <Hero />
       <Problem />
       <Solution />
+      <Cta />
       <HowItWorks />
+      <CaseStudies />
       <World />
+      <Cta />
       <Faqs />
       {/*<News />*/}
       <Cta />

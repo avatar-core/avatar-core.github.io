@@ -1,17 +1,20 @@
 import Image from "next/image";
 import PlanetImage from "@/public/images/planet.png";
 
-export default function FeaturesWorld() {
+export default function World() {
   return (
     <section>
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="md:py-16">
+        <div className="py-12 md:pt-24">
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-            <h1 className="h2 mb-4">Improve your audience engagement</h1>
+            <div className="uppercase mb-4 text-xl font-bold text-blue-600 tracking-wider">
+              Community
+            </div>
+            <h2 className="h2 mb-4">Improve your community engagement</h2>
             <p className="text-xl text-gray-600">
-              The most innovative creators choose to use Avatar AI to
-              personalize and scale their interactions with each of their fans.
+              The most innovative creators choose to use avatar.ai to
+              personalize their interactions with each of their fans.
             </p>
           </div>
 

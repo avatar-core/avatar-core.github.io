@@ -95,7 +95,7 @@ export default function MobileMenu() {
                 onClick={() => setMobileNavOpen(false)}
               >
                 <span>Sign in</span>
-                <span className="tracking-normal text-white-300 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">
+                <span className="tracking-normal text-white group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">
                   -&gt;
                 </span>
               </Link>

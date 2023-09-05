@@ -50,9 +50,9 @@ const DEFAULT_IMAGES = [
 const SOLUTIONS = [
   {
     id: 1,
-    title: "Configure",
+    title: "Setup",
     description:
-      "Work with our AI experts to capture your personality and define your engagement and monetization objectives",
+      "Onboard on our platform and work with our AI experts to capture your personality and define your engagement and monetization objectives.",
     icon: (
       <path d="M11.953 4.29a.5.5 0 00-.454-.292H6.14L6.984.62A.5.5 0 006.12.173l-6 7a.5.5 0 00.379.825h5.359l-.844 3.38a.5.5 0 00.864.445l6-7a.5.5 0 00.075-.534z" />
     ),
@@ -60,9 +60,9 @@ const SOLUTIONS = [
   },
   {
     id: 2,
-    title: "Distribute",
+    title: "Launch",
     description:
-      "Market your new chatbot to your audience with a convenient sign up link",
+      "Promote your AI assistant with a sign up link where fans can easily subscribe for monthly chat privileges.",
     icon: (
       <path
         d="M11.854.146a.5.5 0 00-.525-.116l-11 4a.5.5 0 00-.015.934l4.8 1.921 1.921 4.8A.5.5 0 007.5 12h.008a.5.5 0 00.462-.329l4-11a.5.5 0 00-.116-.525z"
@@ -73,8 +73,9 @@ const SOLUTIONS = [
   },
   {
     id: 3,
-    title: "Analytics",
-    description: "Understand your audience health and revenue sources",
+    title: "Insights",
+    description:
+      "Review conversations and analytics that give you an understanding of your audience's health, interests, and revenue sources.",
     icon: (
       <path
         d="M11.334 8.06a.5.5 0 00-.421-.237 6.023 6.023 0 01-5.905-6c0-.41.042-.82.125-1.221a.5.5 0 00-.614-.586 6 6 0 106.832 8.529.5.5 0 00-.017-.485z"
@@ -86,7 +87,7 @@ const SOLUTIONS = [
   },
 ] as const;
 
-export default function Works() {
+export default function How() {
   const [tab, setTab] = useState<number>(1);
   const tabs = useRef<HTMLDivElement>(null);
 
@@ -105,8 +106,8 @@ export default function Works() {
       <div
         className="absolute inset-0 bg-gray-100 pointer-events-none mb-16"
         aria-hidden="true"
-      ></div>
-      <div className="absolute left-0 right-0 m-auto w-px p-px h-20 bg-gray-200 transform -translate-y-1/2"></div>
+      />
+      <div className="absolute left-0 right-0 m-auto w-px p-px h-20 bg-gray-200 transform -translate-y-1/2" />
 
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
         <div className="pt-12 md:pt-20">
@@ -117,8 +118,8 @@ export default function Works() {
             </div>
             <h2 className="h2 mb-4">Engagement and monetization made easy</h2>
             <p className="text-xl text-gray-600">
-              Set up your AI agent once to have a more engaged audience and
-              receive passive income from your fans.
+              Set up your own personal AI assistant community manager to engage
+              and convert your fan base into paying customers.
             </p>
           </div>
 
@@ -145,7 +146,7 @@ export default function Works() {
                 {SOLUTIONS.map((s) => (
                   <button
                     key={s.id}
-                    className={`text-left flex items-center text-lg p-5 rounded border transition duration-300 ease-in-out mb-3 ${
+                    className={`text-left flex items-center justify-between text-lg p-5 rounded border transition duration-300 ease-in-out mb-3 w-full ${
                       tab !== s.id
                         ? "bg-white shadow-md border-gray-200 hover:shadow-lg"
                         : "bg-gray-200 border-transparent"
@@ -159,7 +160,9 @@ export default function Works() {
                       <div className="font-bold leading-snug tracking-tight mb-1">
                         {s.title}
                       </div>
-                      <div className="text-gray-600">{s.description}</div>
+                      <div className="text-sm text-gray-600">
+                        {s.description}
+                      </div>
                     </div>
                     <div className="flex justify-center items-center w-8 h-8 bg-white rounded-full shadow shrink-0 ml-3">
                       <svg

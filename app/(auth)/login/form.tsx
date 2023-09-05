@@ -1,8 +1,9 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
-import {useState} from "react";
-import {useForm } from '@mantine/form'
+import { useForm } from "@mantine/form";
+
 import PasswordInput from "@/components/ui/password";
 
 export default function Form() {
@@ -15,27 +16,29 @@ export default function Form() {
     },
     validate: {
       email: (val) => (/^\S+@\S+$/.test(val) ? null : "Invalid email"),
-      password: (value) => value.length < 8 ? 'Password must be at least 8 characters' : null,
+      password: (value) =>
+        value.length < 8 ? "Password must be at least 8 characters" : null,
     },
   });
-
 
   return (
     <form
       onSubmit={form.onSubmit(async (values) => {
         setError(undefined);
         setLoading(true);
-        await new Promise(r => setTimeout(r, 1500));
+        await new Promise((r) => setTimeout(r, 1500));
         setLoading(false);
-        setError(new Error('Not implemented'));
+        setError(new Error("Not implemented"));
       })}
     >
-      {error && <div
-        className="text-sm mb-6 bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative"
-        role="alert"
-      >
-        Invalid email address or password.
-      </div>}
+      {error && (
+        <div
+          className="text-sm mb-6 bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative"
+          role="alert"
+        >
+          Invalid email address or password.
+        </div>
+      )}
       <div className="space-y-4">
         <div>
           <label
@@ -52,7 +55,9 @@ export default function Form() {
             disabled={loading}
             {...form.getInputProps("email")}
           />
-          {form.errors.email && <div className="mt-2 text-xs text-red-500">{form.errors.email}</div>}
+          {form.errors.email && (
+            <div className="mt-2 text-xs text-red-500">{form.errors.email}</div>
+          )}
         </div>
         <div>
           <div className="flex justify-between">
@@ -76,13 +81,21 @@ export default function Form() {
             disabled={loading}
             {...form.getInputProps("password")}
           />
-          {form.errors.password && <div className="mt-2 text-xs text-red-500">{form.errors.password}</div>}
+          {form.errors.password && (
+            <div className="mt-2 text-xs text-red-500">
+              {form.errors.password}
+            </div>
+          )}
         </div>
       </div>
       <div className="mt-6">
-        <button type="submit" className="btn-sm text-sm text-white bg-blue-600 hover:bg-blue-700 w-full group disabled:opacity-50" disabled={loading}>
+        <button
+          type="submit"
+          className="btn-sm text-sm text-white bg-blue-600 hover:bg-blue-700 w-full group disabled:opacity-50"
+          disabled={loading}
+        >
           Log in{" "}
-          <span className="tracking-normal text-white-300 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">
+          <span className="tracking-normal text-white group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">
             -&gt;
           </span>
         </button>

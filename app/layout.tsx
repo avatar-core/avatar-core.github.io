@@ -1,7 +1,7 @@
 import "./css/style.css";
 
 import { Inter } from "next/font/google";
-import Script from 'next/script';
+import Script from "next/script";
 
 import Footer from "@/components/ui/footer";
 import Header from "@/components/ui/header";

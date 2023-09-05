@@ -1,9 +1,9 @@
 const SOLUTIONS = [
   {
     id: 1,
-    title: "Content",
+    title: "Engage",
     description:
-      "Avatar AI has dynamic personalized conversations with your fans wherever they are and whenever they want.",
+      "Let avatar.ai have automated, personalized chats with fans. It's as if you have a 24/7 team ensuring constant fan engagement.",
     icon: (
       <g fill="none" fillRule="evenodd">
         <rect
@@ -36,8 +36,8 @@ const SOLUTIONS = [
   },
   {
     id: 2,
-    title: "Engagement",
-    description: `Avatar AI keeps your audience engaged even when you're not online and personalizes its conversation to each fan.`,
+    title: "Retain",
+    description: `No more lost fans. avatar.ai sends tailored messages to re-engage inactive followers, strengthening brand loyalty.`,
     icon: (
       <g fill="none" fillRule="evenodd">
         <rect
@@ -68,9 +68,9 @@ const SOLUTIONS = [
   },
   {
     id: 3,
-    title: "Monetization",
+    title: "Monetize",
     description:
-      "Our platform collects all your monetization strategies and chooses the most effective strategies for each one of your fans.",
+      "avatar.ai guides fans to make purchases. It experiments with monetization approaches, refining strategies to boost your earnings.",
     icon: (
       <g fill="none" fillRule="evenodd">
         <rect
@@ -108,11 +108,11 @@ export default function Solution() {
       <div
         className="absolute inset-0 top-2/3 md:mt-24 lg:mt-0 bg-gray-900 pointer-events-none"
         aria-hidden="true"
-      ></div>
-      <div className="absolute left-0 right-0 bottom-0 m-auto w-px p-px h-20 bg-gray-200 transform translate-y-1/2"></div>
+      />
+      {/*<div className="absolute left-0 right-0 bottom-0 m-auto w-px p-px h-20 bg-gray-200 transform translate-y-1/2" />*/}
 
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="py-20 md:py-20">
+        <div className="py-12">
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
             <div className="uppercase mb-4 text-xl font-bold text-blue-600 tracking-wider">
@@ -120,8 +120,9 @@ export default function Solution() {
             </div>
             <h2 className="h2 mb-4">Use AI to scale your business</h2>
             <p className="text-xl text-gray-600">
-              Avatar AI has personalized conversations with your fans so your
-              audience can remain engaged even when you're not online.
+              Refocus on your passion: crafting content your fans love. With
+              avatar.ai, monetize effortlessly while keeping fans engaged and
+              loyal.
             </p>
           </div>
 
