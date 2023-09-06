@@ -22,7 +22,7 @@ export default function Platforms() {
           <div className="uppercase mb-4 text-xl font-bold text-blue-600 tracking-wider">
             Platforms
           </div>
-          <h2 className="h2 mb-4">Manage your communities on multiple creator platforms</h2>
+          <h2 className="h2 mb-4">Manage your communities on multiple platforms</h2>
         </div>
 
         <div className="flex items-center justify-between">
