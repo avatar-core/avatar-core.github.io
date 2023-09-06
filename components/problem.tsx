@@ -40,7 +40,7 @@ const PROBLEMS = [
     id: 2,
     title: "Retain",
     description:
-      "Maintaining fan interest and attention amidst fierce competition among creators is tough.",
+      "Maintaining fan attention amidst fierce competition among creators is tough.",
     icon: (
       <g fill="none" fillRule="evenodd">
         <rect
@@ -73,7 +73,7 @@ const PROBLEMS = [
     id: 3,
     title: "Monetize",
     description:
-      "Balancing fan engagement with monetization is crucial. You didn't start to push sales, but it's essential for a healthy business.",
+      "Balancing fan engagement with monetization is crucial. No one wants to push sales, but it's essential for a healthy business.",
     icon: (
       <g fill="none" fillRule="evenodd">
         <rect

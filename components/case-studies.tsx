@@ -2,7 +2,9 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
+// import Instagram from "@/public/images/case-studies/instagram.jpg";
 import OnlyFans from "@/public/images/case-studies/onlyfans.webp";
+// import TikTok from "@/public/images/case-studies/tiktok.jpg";
 import Twitch from "@/public/images/case-studies/twitch.jpg";
 import YouTube from "@/public/images/case-studies/youtube.jpg";
 import { Transition } from "@headlessui/react";
@@ -18,6 +20,18 @@ const ICON_PROPS = {
   strokeLinecap: "round",
   strokeLinejoin: "round",
 } as const;
+
+const INSTAGRAM = (
+  <svg {...ICON_PROPS}>
+    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+    <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />
+    <path
+      className="stroke-current text-blue-600"
+      d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"
+    />
+    <path className="stroke-current text-blue-600" d="M16.5 7.5l0 .01" />
+  </svg>
+);
 
 const ONLYFANS = (
   <svg {...ICON_PROPS}>
@@ -37,23 +51,10 @@ const ONLYFANS = (
   </svg>
 );
 
-const INSTAGRAM = (
+const TIKTOK = (
   <svg {...ICON_PROPS}>
     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-    <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />
-    <path
-      className="stroke-current text-blue-600"
-      d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"
-    />
-    <path className="stroke-current text-blue-600" d="M16.5 7.5l0 .01" />
-  </svg>
-);
-
-const YOUTUBE = (
-  <svg {...ICON_PROPS}>
-    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-    <path d="M3 5m0 4a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v6a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" />
-    <path className="stroke-current text-blue-600" d="M10 9l5 3l-5 3z" />
+    <path d="M21 7.917v4.034a9.948 9.948 0 0 1 -5 -1.951v4.5a6.5 6.5 0 1 1 -8 -6.326v4.326a2.5 2.5 0 1 0 4 2v-11.5h4.083a6.005 6.005 0 0 0 4.917 4.917z" />
   </svg>
 );
 
@@ -66,43 +67,17 @@ const TWITCH = (
   </svg>
 );
 
+const YOUTUBE = (
+  <svg {...ICON_PROPS}>
+    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+    <path d="M3 5m0 4a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v6a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" />
+    <path className="stroke-current text-blue-600" d="M10 9l5 3l-5 3z" />
+  </svg>
+);
+
 const CASE_STUDIES = [
   {
     id: 1,
-    platform: "OnlyFans",
-    icon: ONLYFANS,
-    image: OnlyFans,
-    sections: [
-      {
-        title: "Setup",
-        content:
-          "Laura syncs past chats and our AI experts infuse her personality into an automated chatbot.",
-      },
-      {
-        title: "Launch",
-        content:
-          'Laura promotes her "exclusive chat" on socials with a sign-up link. Fans can easily subscribe via the link for monthly chat access. Avatar.ai manages both sign-up and payments.',
-      },
-      {
-        title: "Insights",
-        content:
-          "Laura reviews chatbot-generated conversations and flags off-brand messages. She easily tracks key metrics like subscriber count and passive revenue.",
-      },
-    ],
-  },
-  // {
-  //   id: 2,
-  //   platform: "Instagram",
-  //   icon: INSTAGRAM,
-  //   image: About2,
-  //   sections: [
-  //     { title: 'Setup', content: 'Emily syncs past chats and our AI experts infuse her personality into an automated chatbot.' },
-  //     { title: 'Launch', content: 'Emily promotes her "exclusive chat" on socials with a sign-up link. Fans can easily subscribe via the link for monthly chat access. Avatar.ai manages both sign-up and payments.' },
-  //     { title: 'Insights', content: 'Emily reviews chatbot-generated conversations and flags off-brand messages. She easily tracks key metrics like subscriber count and passive revenue.' },
-  //   ],
-  // },
-  {
-    id: 2,
     platform: "YouTube",
     icon: YOUTUBE,
     image: YouTube,
@@ -121,6 +96,29 @@ const CASE_STUDIES = [
         title: "Insights",
         content:
           "Mayuko monitors chatbot comments and adjusts its tone. A dedicated dashboard displays KPIs including Patreon redirects and top-performing videos.",
+      },
+    ],
+  },
+  {
+    id: 2,
+    platform: "OnlyFans",
+    icon: ONLYFANS,
+    image: OnlyFans,
+    sections: [
+      {
+        title: "Setup",
+        content:
+          "Laura syncs her DMs with our platform and our AI experts construct a chatbot with Laura's personality for her fans.",
+      },
+      {
+        title: "Launch",
+        content:
+          'Laura promotes her "exclusive chat" on socials with a sign-up link. Fans can easily subscribe to access the exclusive chat service. avatar.ai manages both sign-up and payments for the service.',
+      },
+      {
+        title: "Insights",
+        content:
+          "Laura reviews chatbot-generated conversations and flags off-brand messages. She easily tracks key metrics like subscriber count and passive revenue.",
       },
     ],
   },
@@ -147,6 +145,28 @@ const CASE_STUDIES = [
       },
     ],
   },
+  // {
+  //   id: 4,
+  //   platform: "Instagram",
+  //   icon: INSTAGRAM,
+  //   image: YouTube,
+  //   sections: [
+  //     { title: 'Setup', content: 'Emily syncs past chats and our AI experts infuse her personality into an automated chatbot.' },
+  //     { title: 'Launch', content: 'Emily promotes her "exclusive chat" on socials with a sign-up link. Fans can easily subscribe via the link for monthly chat access. Avatar.ai manages both sign-up and payments.' },
+  //     { title: 'Insights', content: 'Emily reviews chatbot-generated conversations and flags off-brand messages. She easily tracks key metrics like subscriber count and passive revenue.' },
+  //   ],
+  // },
+  // {
+  //   id: 5,
+  //   platform: "TikTok",
+  //   icon: TIKTOK,
+  //   image: YouTube,
+  //   sections: [
+  //     { title: 'Setup', content: 'Emily syncs past chats and our AI experts infuse her personality into an automated chatbot.' },
+  //     { title: 'Launch', content: 'Emily promotes her "exclusive chat" on socials with a sign-up link. Fans can easily subscribe via the link for monthly chat access. Avatar.ai manages both sign-up and payments.' },
+  //     { title: 'Insights', content: 'Emily reviews chatbot-generated conversations and flags off-brand messages. She easily tracks key metrics like subscriber count and passive revenue.' },
+  //   ],
+  // },
 ] as const;
 
 export default function CaseStudies() {
@@ -236,11 +256,7 @@ export default function CaseStudies() {
                   >
                     {
                       <article className="relative max-w-md mx-auto md:max-w-none">
-                        <figure
-                          className={`md:absolute md:inset-y-0 md:w-1/2 ${
-                            c.id % 2 === 0 ? "md:right-0" : "md:left-0"
-                          }`}
-                        >
+                        <figure className="md:absolute md:inset-y-0 md:w-1/2 md:right-0">
                           <Image
                             className="w-full h-full object-cover"
                             src={c.image}
@@ -249,13 +265,7 @@ export default function CaseStudies() {
                             alt={c.platform}
                           />
                         </figure>
-                        <div
-                          className={`relative bg-blue-600 py-8 md:py-16 px-6 md:max-w-lg lg:max-w-xl ${
-                            c.id % 2 === 0
-                              ? "md:px-12 md:mr-auto"
-                              : "md:px-12 md:ml-auto"
-                          }`}
-                        >
+                        <div className="relative bg-blue-600 py-8 md:py-16 px-6 md:max-w-lg lg:max-w-xl md:px-12 md:mr-auto">
                           <h3 className="h3 text-white mb-4">{c.platform}</h3>
                           {c.sections.map((s, i) => (
                             <div className="mb-4" key={i}>

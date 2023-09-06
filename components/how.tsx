@@ -6,6 +6,9 @@ import FeaturesBg01 from "@/public/images/features-home-bg-01.png";
 import FeaturesElement01 from "@/public/images/features-home-element-01.png";
 import FeaturesElement02 from "@/public/images/features-home-element-02.png";
 import FeaturesElement03 from "@/public/images/features-home-element-03.png";
+import Insights from "@/public/images/how-it-works/insights.png";
+import Launch from "@/public/images/how-it-works/launch.png";
+import Setup from "@/public/images/how-it-works/setup.png";
 import { Transition } from "@headlessui/react";
 
 const DEFAULT_IMAGES = [
@@ -55,7 +58,16 @@ const SOLUTIONS = [
     icon: (
       <path d="M11.953 4.29a.5.5 0 00-.454-.292H6.14L6.984.62A.5.5 0 006.12.173l-6 7a.5.5 0 00.379.825h5.359l-.844 3.38a.5.5 0 00.864.445l6-7a.5.5 0 00.075-.534z" />
     ),
-    images: DEFAULT_IMAGES,
+    images: [
+      <Image
+        key="1"
+        className="md:max-w-none mx-auto rounded"
+        src={Setup}
+        width={500}
+        height={375}
+        alt="Setup"
+      />,
+    ],
   },
   {
     id: 2,
@@ -68,7 +80,16 @@ const SOLUTIONS = [
         fillRule="nonzero"
       />
     ),
-    images: DEFAULT_IMAGES,
+    images: [
+      <Image
+        key="1"
+        className="md:max-w-none mx-auto rounded"
+        src={Launch}
+        width={200}
+        height={375}
+        alt="Launch"
+      />,
+    ],
   },
   {
     id: 3,
@@ -82,7 +103,16 @@ const SOLUTIONS = [
         fillRule="nonzero"
       />
     ),
-    images: DEFAULT_IMAGES,
+    images: [
+      <Image
+        key="1"
+        className="md:max-w-none mx-auto rounded"
+        src={Insights}
+        width={500}
+        height={375}
+        alt="Insights"
+      />,
+    ],
   },
 ] as const;
 
@@ -131,8 +161,8 @@ export default function How() {
           <div className="md:grid md:grid-cols-12 md:gap-6">
             {/* Content */}
             <div
-              className="mx-auto md:w-full md:max-w-none max-w-xl col-span-6 col-start-4"
-              // className="max-w-xl md:max-w-none md:w-full mx-auto md:col-start-3 md:col-span-6 md:mt-6"
+              // className="mx-auto md:w-full md:max-w-none max-w-xl col-span-6 col-start-4"
+              className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-6 md:mt-6"
               data-aos="fade-right"
             >
               {/*<div className="md:pr-4 lg:pr-12 xl:pr-16 mb-8">*/}
@@ -179,35 +209,35 @@ export default function How() {
             </div>
 
             {/* Tabs items */}
-            {/*<div className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-6 my-8 md:mb-0 md:order-1">*/}
-            {/*  <div className="transition-all">*/}
-            {/*    <div*/}
-            {/*      className="relative flex flex-col text-center lg:text-right"*/}
-            {/*      data-aos="zoom-y-out"*/}
-            {/*      ref={tabs}*/}
-            {/*    >*/}
-            {/*      {SOLUTIONS.map((s) => (*/}
-            {/*        <Transition*/}
-            {/*          key={s.id}*/}
-            {/*          show={tab === s.id}*/}
-            {/*          className="w-full"*/}
-            {/*          enter="transition ease-in-out duration-700 transform order-first"*/}
-            {/*          enterFrom="opacity-0 translate-y-16"*/}
-            {/*          enterTo="opacity-100 translate-y-0"*/}
-            {/*          leave="transition ease-in-out duration-300 transform absolute"*/}
-            {/*          leaveFrom="opacity-100 translate-y-0"*/}
-            {/*          leaveTo="opacity-0 -translate-y-16"*/}
-            {/*          beforeEnter={() => heightFix()}*/}
-            {/*          unmount={false}*/}
-            {/*        >*/}
-            {/*          <div className="relative inline-flex flex-col">*/}
-            {/*            {s.images}*/}
-            {/*          </div>*/}
-            {/*        </Transition>*/}
-            {/*      ))}*/}
-            {/*    </div>*/}
-            {/*  </div>*/}
-            {/*</div>*/}
+            <div className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-6 my-8 md:mb-0 md:order-1">
+              <div className="transition-all">
+                <div
+                  className="relative flex flex-col text-center lg:text-right"
+                  data-aos="zoom-y-out"
+                  ref={tabs}
+                >
+                  {SOLUTIONS.map((s) => (
+                    <Transition
+                      key={s.id}
+                      show={tab === s.id}
+                      className="w-full"
+                      enter="transition ease-in-out duration-700 transform order-first"
+                      enterFrom="opacity-0 translate-y-16"
+                      enterTo="opacity-100 translate-y-0"
+                      leave="transition ease-in-out duration-300 transform absolute"
+                      leaveFrom="opacity-100 translate-y-0"
+                      leaveTo="opacity-0 -translate-y-16"
+                      beforeEnter={() => heightFix()}
+                      unmount={false}
+                    >
+                      <div className="relative">
+                        {s.images}
+                      </div>
+                    </Transition>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

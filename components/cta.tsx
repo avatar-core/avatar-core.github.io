@@ -15,7 +15,7 @@ export default function Cta() {
               <div className="mb-6 lg:mr-16 lg:mb-0 text-center lg:text-left">
                 <h3 className="h3 text-white mb-2">Ready to get started?</h3>
                 <p className="text-white text-lg opacity-75">
-                  We have a no-risk free trial to get you started right away.
+                  No credit card required.
                 </p>
               </div>
 

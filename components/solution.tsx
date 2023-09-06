@@ -121,8 +121,8 @@ export default function Solution() {
             <h2 className="h2 mb-4">Use AI to scale your business</h2>
             <p className="text-xl text-gray-600">
               Refocus on your passion: crafting content your fans love. With
-              avatar.ai as your community manager, monetize effortlessly while keeping fans engaged and
-              loyal.
+              avatar.ai as your community manager, monetize effortlessly while
+              keeping fans engaged and loyal.
             </p>
           </div>
 
