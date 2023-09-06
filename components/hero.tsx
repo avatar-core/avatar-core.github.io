@@ -2,6 +2,7 @@ import Link from "next/link";
 import VideoThumb from "@/public/images/hero-image-01.png";
 
 import ModalVideo from "@/components/modal-video";
+import Platforms from "@/components/platforms";
 
 export default function Hero() {
   return (
@@ -39,9 +40,9 @@ export default function Hero() {
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Hero content */}
-        <div className="pt-32 pb-12 md:pt-40 md:pb-20">
+        <div className="pt-32 md:pt-40">
           {/* Section header */}
-          <div className="text-center pb-12 md:pb-16">
+          <div className="text-center md:pb-16">
             {/*<div data-aos="fade-down" className="mb-6">*/}
             {/*  <div className="inline-flex relative round-full before:absolute before:inset-0 before:bg-blue-500 before:blur-md">*/}
             {/*    <a className="btn-sm py-1 text-white hover:text-white transition duration-150 ease-in-out group [background:linear-gradient(theme(colors.blue.600),_theme(colors.blue.600))_padding-box,_linear-gradient(theme(colors.blue.600),_theme(colors.blue.300)_75%,_theme(colors.transparent)_100%)_border-box] relative before:absolute before:inset-0 before:bg-blue-600/50 rounded-full before:pointer-events-none shadow" href="#0">*/}

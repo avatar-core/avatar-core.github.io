@@ -4,6 +4,7 @@ import Faqs from "@/components/faqs";
 import Hero from "@/components/hero";
 import HowItWorks from "@/components/how";
 import News from "@/components/news";
+import Platforms from "@/components/platforms";
 import Problem from "@/components/problem";
 import Solution from "@/components/solution";
 import World from "@/components/world";
@@ -17,6 +18,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <Platforms />
       <Problem />
       <Solution />
       <Cta />

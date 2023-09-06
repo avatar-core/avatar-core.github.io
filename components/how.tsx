@@ -2,52 +2,52 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import FeaturesBg01 from "@/public/images/features-home-bg-01.png";
-import FeaturesElement01 from "@/public/images/features-home-element-01.png";
-import FeaturesElement02 from "@/public/images/features-home-element-02.png";
-import FeaturesElement03 from "@/public/images/features-home-element-03.png";
+// import FeaturesBg01 from "@/public/images/features-home-bg-01.png";
+// import FeaturesElement01 from "@/public/images/features-home-element-01.png";
+// import FeaturesElement02 from "@/public/images/features-home-element-02.png";
+// import FeaturesElement03 from "@/public/images/features-home-element-03.png";
 import Insights from "@/public/images/how-it-works/insights.png";
 import Launch from "@/public/images/how-it-works/launch.png";
 import Setup from "@/public/images/how-it-works/setup.png";
 import { Transition } from "@headlessui/react";
 
-const DEFAULT_IMAGES = [
-  <Image
-    key="1"
-    className="md:max-w-none mx-auto rounded"
-    src={FeaturesBg01}
-    width={500}
-    height={375}
-    alt="Features bg"
-  />,
-  <Image
-    key="2"
-    className="md:max-w-none absolute w-full left-0 transform animate-float"
-    src={FeaturesElement01}
-    width={500}
-    height={147}
-    alt="Element 01"
-    style={{ top: "22%" }}
-  />,
-  <Image
-    key="3"
-    className="md:max-w-none absolute w-full left-0 transform animate-float animation-delay-500"
-    src={FeaturesElement02}
-    width={500}
-    height={158}
-    alt="Element 02"
-    style={{ top: "39%" }}
-  />,
-  <Image
-    key="4"
-    className="md:max-w-none absolute w-full left-0 bottom-0 transform animate-float animation-delay-1000"
-    src={FeaturesElement03}
-    width={500}
-    height={167}
-    alt="Element 03"
-    style={{ top: "77%" }}
-  />,
-] as const;
+// const DEFAULT_IMAGES = [
+//   <Image
+//     key="1"
+//     className="md:max-w-none mx-auto rounded"
+//     src={FeaturesBg01}
+//     width={500}
+//     height={375}
+//     alt="Features bg"
+//   />,
+//   <Image
+//     key="2"
+//     className="md:max-w-none absolute w-full left-0 transform animate-float"
+//     src={FeaturesElement01}
+//     width={500}
+//     height={147}
+//     alt="Element 01"
+//     style={{ top: "22%" }}
+//   />,
+//   <Image
+//     key="3"
+//     className="md:max-w-none absolute w-full left-0 transform animate-float animation-delay-500"
+//     src={FeaturesElement02}
+//     width={500}
+//     height={158}
+//     alt="Element 02"
+//     style={{ top: "39%" }}
+//   />,
+//   <Image
+//     key="4"
+//     className="md:max-w-none absolute w-full left-0 bottom-0 transform animate-float animation-delay-1000"
+//     src={FeaturesElement03}
+//     width={500}
+//     height={167}
+//     alt="Element 03"
+//     style={{ top: "77%" }}
+//   />,
+// ] as const;
 
 const SOLUTIONS = [
   {
@@ -230,9 +230,7 @@ export default function How() {
                       beforeEnter={() => heightFix()}
                       unmount={false}
                     >
-                      <div className="relative">
-                        {s.images}
-                      </div>
+                      <div className="relative">{s.images}</div>
                     </Transition>
                   ))}
                 </div>
