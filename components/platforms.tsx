@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import Instagram from "@/public/images/platforms/instagram2.svg";
+import Instagram from "@/public/images/platforms/instagram.svg";
 import OnlyFans from "@/public/images/platforms/onlyfans.svg";
 import TikTok from "@/public/images/platforms/tiktok.svg";
 import Twitch from "@/public/images/platforms/twitch.svg";
