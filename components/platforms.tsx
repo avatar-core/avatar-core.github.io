@@ -22,15 +22,27 @@ export default function Platforms() {
           <div className="uppercase mb-4 text-xl font-bold text-blue-600 tracking-wider">
             Platforms
           </div>
-          <h2 className="h2 mb-4">Manage your communities on multiple platforms</h2>
+          <h2 className="h2 mb-4">
+            Manage your communities on multiple platforms
+          </h2>
         </div>
 
-        <div className="flex items-center justify-between">
-          <Image src={Instagram} alt="instagram" width={110} height={21} />
-          <Image src={YouTube} alt="youtube" width={110} height={21} />
-          <Image src={TikTok} alt="tiktok" width={110} height={21} />
-          <Image src={OnlyFans} alt="onlyfans" width={110} height={21} />
-          <Image src={Twitch} alt="twitch" width={110} height={21} />
+        <div className="flex items-center max-w-sm mx-auto grid gap-8 md:gap-16 md:grid-cols-2 lg:grid-cols-5 items-start md:max-w-2xl lg:max-w-5xl pt-8 md:pt-12">
+          <div className="mx-auto">
+            <Image src={Instagram} alt="instagram" height={30} />
+          </div>
+          <div className="mx-auto">
+            <Image src={YouTube} alt="youtube" height={30} />
+          </div>
+          <div className="mx-auto">
+            <Image src={TikTok} alt="tiktok" height={30} />
+          </div>
+          <div className="mx-auto">
+            <Image src={OnlyFans} alt="onlyfans" height={30} />
+          </div>
+          <div className="mx-auto">
+            <Image src={Twitch} alt="twitch" height={30} />
+          </div>
         </div>
       </div>
     </section>
