@@ -2,9 +2,9 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-// import Instagram from "@/public/images/case-studies/instagram.jpg";
+import Instagram from "@/public/images/case-studies/instagram.jpg";
 import OnlyFans from "@/public/images/case-studies/onlyfans.webp";
-// import TikTok from "@/public/images/case-studies/tiktok.jpg";
+import TikTok from "@/public/images/case-studies/tiktok.jpg";
 import Twitch from "@/public/images/case-studies/twitch.jpg";
 import YouTube from "@/public/images/case-studies/youtube.jpg";
 import { Transition } from "@headlessui/react";
@@ -79,6 +79,9 @@ const CASE_STUDIES = [
   {
     id: 1,
     platform: "YouTube",
+    user: "Mayuko Inoue",
+    link: "https://www.youtube.com/@hellomayuko",
+    subtitle: "Convert YouTube Engagement into Paid Patreon Subscribers",
     icon: YOUTUBE,
     image: YouTube,
     sections: [
@@ -90,7 +93,7 @@ const CASE_STUDIES = [
       {
         title: "Launch",
         content:
-          "Our engineers embed the chatbot on Mayuko's YouTube, which then interacts in comments. It identifies devoted fans and nudges them towards her paid content.",
+          "Our engineers embed the chatbot on Mayuko's YouTube, which then interacts in comments. It identifies devoted fans and directs them towards her paid content.",
       },
       {
         title: "Insights",
@@ -102,6 +105,9 @@ const CASE_STUDIES = [
   {
     id: 2,
     platform: "OnlyFans",
+    user: "Laura Lux",
+    link: "https://onlyfans.com/lauralux",
+    subtitle: "Generate Passive Income with Subscriber-only Chatbot",
     icon: ONLYFANS,
     image: OnlyFans,
     sections: [
@@ -125,6 +131,9 @@ const CASE_STUDIES = [
   {
     id: 3,
     platform: "Twitch",
+    user: "Nick Kolcheff",
+    link: "https://www.twitch.tv/nickmercs",
+    subtitle: "Convert Twitch Fans to Merch Buyers",
     icon: TWITCH,
     image: Twitch,
     sections: [
@@ -145,28 +154,58 @@ const CASE_STUDIES = [
       },
     ],
   },
-  // {
-  //   id: 4,
-  //   platform: "Instagram",
-  //   icon: INSTAGRAM,
-  //   image: YouTube,
-  //   sections: [
-  //     { title: 'Setup', content: 'Emily syncs past chats and our AI experts infuse her personality into an automated chatbot.' },
-  //     { title: 'Launch', content: 'Emily promotes her "exclusive chat" on socials with a sign-up link. Fans can easily subscribe via the link for monthly chat access. Avatar.ai manages both sign-up and payments.' },
-  //     { title: 'Insights', content: 'Emily reviews chatbot-generated conversations and flags off-brand messages. She easily tracks key metrics like subscriber count and passive revenue.' },
-  //   ],
-  // },
-  // {
-  //   id: 5,
-  //   platform: "TikTok",
-  //   icon: TIKTOK,
-  //   image: YouTube,
-  //   sections: [
-  //     { title: 'Setup', content: 'Emily syncs past chats and our AI experts infuse her personality into an automated chatbot.' },
-  //     { title: 'Launch', content: 'Emily promotes her "exclusive chat" on socials with a sign-up link. Fans can easily subscribe via the link for monthly chat access. Avatar.ai manages both sign-up and payments.' },
-  //     { title: 'Insights', content: 'Emily reviews chatbot-generated conversations and flags off-brand messages. She easily tracks key metrics like subscriber count and passive revenue.' },
-  //   ],
-  // },
+  {
+    id: 4,
+    platform: "Instagram",
+    user: "Katy Fassett",
+    link: "https://www.instagram.com/katy.fassett/",
+    subtitle: "Help Give Followers Confidence to Buy Affliate Products",
+    icon: INSTAGRAM,
+    image: Instagram,
+    sections: [
+      {
+        title: "Setup",
+        content:
+          "Katie, a mom influencer, endorses Bugaboo strollers with affiliate links. Teaming with our AI experts, she integrates a chatbot tailored to her voice. This bot proficiently answers Bugaboo-specific questions, ensuring fans have confidence to buy.",
+      },
+      {
+        title: "Launch",
+        content:
+          "Katie’s specialty trained bot responds promptly to product-related comments and DMs, amplifying her sales and earnings.",
+      },
+      {
+        title: "Insights",
+        content:
+          "Katie reviews all bot interactions via a dashboard. Key metrics include interaction counts, strollers sold through affiliates, and resulting revenue.",
+      },
+    ],
+  },
+  {
+    id: 5,
+    platform: "TikTok",
+    user: "Stella Chuu",
+    link: "https://www.tiktok.com/@stellachuu?lang=en",
+    subtitle: "Maximizes Tips from Anime Cosplay Livestreams",
+    icon: TIKTOK,
+    image: TikTok,
+    sections: [
+      {
+        title: "Setup",
+        content:
+          "Stella combines anime cosplay with singing during her weekly livestreams. When she sings fan-requested tracks or answers questions, tips pour in.",
+      },
+      {
+        title: "Launch",
+        content:
+          "Collaborating with avatar.ai, Stella introduces a chatbot into her livestreams. This bot actively scans chat interactions, suggests which anime song to perform next, and nudges her to answer trending questions.",
+      },
+      {
+        title: "Insights",
+        content:
+          "With the bot's guidance, Stella maximizes fan engagement and sees a surge in appreciation tips.",
+      },
+    ],
+  },
 ] as const;
 
 export default function CaseStudies() {
@@ -266,7 +305,15 @@ export default function CaseStudies() {
                           />
                         </figure>
                         <div className="relative bg-blue-600 py-8 md:py-16 px-6 md:max-w-lg lg:max-w-xl md:px-12 md:mr-auto">
-                          <h3 className="h3 text-white mb-4">{c.platform}</h3>
+                          <h3 className="h3 text-white mb-2">
+                            {c.platform} -{" "}
+                            <a href={c.link} target="_blank">
+                              {c.user}
+                            </a>
+                          </h3>
+                          <div className="text-slate-200 font-bold mb-4">
+                            {c.subtitle}
+                          </div>
                           {c.sections.map((s, i) => (
                             <div className="mb-4" key={i}>
                               <div className="h5 font-bold text-white">
